@@ -1,4 +1,4 @@
---exercise 1
+--exercise 1: SELECT queries 101
 --1.1
     SELECT title FROM movies;
 --1.2
@@ -9,7 +9,10 @@
     SELECT title, year FROM movies;
 --1.5
     SELECT * FROM movies;
---exercise 2
+
+
+
+--exercise 2: Queries with constraints (Pt. 1)
 --2.1
     SELECT * FROM movies WHERE id=6;
 --2.2
@@ -21,7 +24,10 @@
 --2.4
     SELECT * FROM movies 
         WHERE (id BETWEEN 0 AND 5);
---exercise 3
+
+
+
+--exercise 3: Queries with constraints (Pt. 2)
 --3.1
     SELECT * FROM Movies
         WHERE (title LIKE "%Toy%");
@@ -34,7 +40,10 @@
 --3.4
     SELECT * FROM Movies
         WHERE (title LIKE "%Wall%");
---exercise 4
+
+
+
+--exercise 4: Filtering and sorting Query results
 --4.1
 SELECT DISTINCT director FROM movies
     ORDER BY director;
@@ -50,7 +59,10 @@ SELECT title FROM movies
 SELECT title FROM movies
     ORDER BY title 
     LIMIT 5 OFFSET 5;
---exercise 5
+
+
+    
+--exercise 5: Simple SELECT Queries
 --5.1
 SELECT * FROM north_american_cities
     WHERE country LIKE "%Canada%";

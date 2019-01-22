@@ -38,7 +38,16 @@ FROM buildings
 WHERE role IS NULL;
 --exercise 9
 --9.1
-
+SELECT title, (domestic_sales + international_sales) / 1000000 AS all_sales_millions
+FROM movies
+  JOIN boxoffice
+    ON movies.id = boxoffice.movie_id;
 --9.2
-
+SELECT title, (rating*10) As rating
+FROM movies
+  JOIN boxoffice
+    ON movies.id = boxoffice.movie_id;
 --9.3
+SELECT title, year
+FROM movies
+WHERE year % 2 = 0;
